@@ -1245,7 +1245,7 @@ VOID kuhl_m_sekurlsa_genericCredsOutput(PKIWI_GENERIC_PRIMARY_CREDENTIAL mesCred
 			pHashPassword = &localHashPassword;
 
 			// 2. Safely map the fields based on OS version
-			if (pData->cLsass->osContext.BuildNumber < KULL_M_BUILD_2022) {
+			if (pData->cLsass->osContext.BuildNumber < KULL_M_WIN_BUILD_2022) {
 				PKERB_HASHPASSWORD_GENERIC pSource = (PKERB_HASHPASSWORD_GENERIC)mesCreds;
 				localHashPassword.Type = pSource->Type;
 				localHashPassword.Size = pSource->Size;
